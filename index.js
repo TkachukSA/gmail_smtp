@@ -50,7 +50,7 @@ app.post('/sendMessge', async (req, res) => {
 })
 
 app.get('/', (req, res) => {
-    res.send('HellWorld')
+    res.send('Hello World')
 });
 let port = process.env.PORT || 3010
 
