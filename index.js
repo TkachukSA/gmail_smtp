@@ -13,6 +13,7 @@ app.use(express.json())
 
 let login = process.env.login || ''
 let password = process.env.password || ''
+
 let transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
@@ -57,3 +58,4 @@ let port = process.env.PORT || 3010
 app.listen(port, () => {
     console.log('port 3010')
 })
+
