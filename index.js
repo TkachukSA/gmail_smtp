@@ -11,8 +11,8 @@ app.use(bodyParser.urlencoded({extendent: true}))
 app.use(express.json())
 
 
-let smtp_login = process.env.SMTP_LOGIN || '--'
-let smtp_password = process.env.SMTP_PASSWORD || '--'
+let smtp_login = process.env.smtp_login || " "
+let smtp_password = process.env.smtp_password || '--'
 
 let transporter = nodemailer.createTransport({
     service: "gmail",
