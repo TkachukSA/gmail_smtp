@@ -11,14 +11,14 @@ app.use(bodyParser.urlencoded({extendent: true}))
 app.use(express.json())
 
 
-let login = process.env.login || ''
-let password = process.env.password || ''
+let smtp_login = process.env.SMTP_LOGIN || '--'
+let smtp_password = process.env.SMTP_PASSWORD || '--'
 
 let transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-        user: 'asa121asaasa@gmail.com',
-        pass: 'asa121asa'
+        user: smtp_login,
+        pass: smtp_password
     }
 })
 
