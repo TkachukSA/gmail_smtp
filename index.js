@@ -17,8 +17,8 @@ let password = process.env.password || ''
 let transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-        user: login,
-        pass: password
+        user: 'asa121asaasa@gmail.com',
+        pass: 'asa121asa'
     }
 })
 
@@ -58,4 +58,3 @@ let port = process.env.PORT || 3010
 app.listen(port, () => {
     console.log('port 3010')
 })
-
