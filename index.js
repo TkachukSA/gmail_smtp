@@ -61,6 +61,6 @@ app.get('/', (req, res) => {
 });
 let port = process.env.PORT || 3010
 
-app.listen(3010, () => {
+app.listen(port, () => {
     console.log('port 3010')
 })
