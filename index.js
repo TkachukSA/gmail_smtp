@@ -8,7 +8,11 @@ const cors = require('cors');
 
 
 /*app.use(cors());*/
-app.use(cors({ origin: "http:\\localhost:3000" }))
+app.use(cors(
+    {
+        origin: "https://asa121asa.github.io"
+    }
+))
 app.use(bodyParser.urlencoded({extendent: true}))
 app.use(express.json())
 
@@ -51,7 +55,7 @@ app.post('/sendMessge', async (req, res) => {
     res.send(console.log(req.body))
 
 })
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
     res.header("Access-Control-Allow-Origin", '*');
     res.header("Access-Control-Allow-Credentials", true);
     res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
